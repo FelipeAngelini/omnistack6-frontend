@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **Projeto da semana OmniStack 6.0 RocketSeat**
 
-## Available Scripts
+**O que é a semana?**
+Durante essa semana construímos juntos uma aplicação do zero utilizando NodeJS no back-end, ReactJS no front-end e React Native no mobile, para descobrir na prática todas as vantagens dessa stack e porque essas tecnologias fazem tanto sentido juntas.
 
-In the project directory, you can run:
+Você vai aprender como cada uma dessas tecnologias funcionam e como elas se integram, além de todos os critérios para a escolha dessas ferramentas. E finalmente, você vai entender como essa stack pode levar suas aplicações e a sua carreira de programador para o próximo nível.
 
-### `npm start`
+**Objetivo**
+O objetivo da sexta semana OmniStack foi construir uma solução para armazenamento/compartilhamento de arquivos na nuvem, parecido com dropbox, google drive e outros.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [Backend](#backend)
+2. [Frontend Web](#web)
+3. [Frontend Mobile](#mobile)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Backend <a name="backend"></a>
+ O backend consiste em um servidor capaz de receber requisições REST. Ele é capaz de receber arquivos dos clientes, armazenar e disponibilizar conforme acessados. 
+  [Código fonte](https://github.com/FelipeAngelini/omnistack6-backend).
+ 
+**Tecnologias utilizadas**
+ - Desenvolvido em NodeJS;
+ - Banco de dados não relacional MongoDB, com utilização do servidor MongoDB Atlas;
+ - Módulo `express` para gerenciar as requisições REST;
+ - Módulo `mongoose` para realizar a modelagem de objetos MongoDB;
+ - Módulo `multer` para enviar as requisições em `multipart/form-data` necessário para o envio de arquivos;
+ - Módulo `socket.io` para comunicação em tempo real entre os clientes;
+ 
+ **Como instalar**
+ 1. Pré-requisitos -> Ter o NodeJS instalado e um gerenciar de pacotes NPM ou YARN;
+ 2. Clone o repositório;
+````git clone https://github.com/FelipeAngelini/omnistack6-backend.git````
+3. Baixe as dependências
+**````npm install````** ou **````yarn````** 
+4. Inicie o projeto
+**````npm run start````** ou **````yarn start````** 
+ 
+## Frontend web <a name="web"></a>
+O frontend web consiste em uma pagina web, capaz de criar uma "pasta de trabalho" e enviar arquivos.
+- [Código fonte](https://github.com/FelipeAngelini/omnistack6-frontend)
+- [Teste online](https://omnistack-frontend-angelini.herokuapp.com/)
 
-### `npm test`
+**Imagens**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Tela principal](https://raw.githubusercontent.com/FelipeAngelini/omnistack6-frontend/master/images/image1.png)
+![Tela de enviar arquivos](https://raw.githubusercontent.com/FelipeAngelini/omnistack6-frontend/master/images/image2.png)
+![Tela com arquivos carregados](https://raw.githubusercontent.com/FelipeAngelini/omnistack6-frontend/master/images/image3.png)
+**Tecnologias utilizadas**
 
-### `npm run build`
+ - Desenvolvido em ReactJS;
+ - Módulo `axios` para realizar as requisições REST ao servidor;
+ - Módulo `date-fns` para formatação de datas;
+ - Módulo `react-router-dom`para realizar o roteamento entre as páginas;
+ - Módulo `react-dropzone`, componente para selecionar ou arrastar os arquivos;
+ - Módulo `socket.io·client` para comunicação em tempo real;
+ 
+ **Como instalar**
+ 1. Pré-requisitos -> Ter o NodeJS instalado e um gerenciar de pacotes NPM ou YARN;
+ 2. Clone o repositório;
+````git clone https://github.com/FelipeAngelini/omnistack6-frontend.git````
+3. Baixe as dependências
+**````npm install````** ou **````yarn````** 
+4. Inicie o projeto
+**````npm run start````** ou **````yarn start````** 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Frontend mobile <a name="mobile"></a>
+O frontend mobile consiste em um aplicativo mobile para Android e iOS, capaz de criar uma "pasta de trabalho" e enviar arquivos, semelhante ao frontend web, porem com toda a experiencia do usuário adaptada ao dispositivos móveis.
+[Código fonte](https://github.com/FelipeAngelini/omnistack6-mobile)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+**Imagens**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Tela principal](https://raw.githubusercontent.com/FelipeAngelini/omnistack6-mobile/master/images/image1.png)
+![Tela de enviar arquivos](https://raw.githubusercontent.com/FelipeAngelini/omnistack6-mobile/master/images/image2.png)
 
-### `npm run eject`
+**Tecnologias utilizadas**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ - Desenvolvido em React Native;
+ - Módulo `axios` para realizar as requisições REST ao servidor;
+ - Módulo `date-fns` para formatação de datas;
+ - Módulo `react-navigation`para realizar a navegação entre as telas;
+ - Módulo `react-native-image-picker`, componente para capturar ou carregar imagens;
+ - Módulo `react-native-file-viewer`, componente visualizar de forma nativa qualquer arquivo;  
+ - Módulo `socket.io·client` para comunicação em tempo real;
+ 
+ **Como instalar**
+1. Pré-requisitos -> Ter o NodeJS instalado, um gerenciar de pacotes NPM ou YARN e o  React Native CLI configurado;
+2. Clone o repositório;
+````git clone https://github.com/FelipeAngelini/omnistack6-mobile.git````
+3. Baixe as dependências
+**````npm install````** ou **````yarn````** 
+4. Inicie o projeto
+````react-native run-android```` 
